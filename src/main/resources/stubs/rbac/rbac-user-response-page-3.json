@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "id": "42a3cc73-cb4e-4e4b-b0d9-1ac54f13c508",
+      "username": "winters",
+      "email": "winters@redhat.com",
+      "firstName": "richard",
+      "lastName": "winters",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "d2ee48e6-6b0e-4a20-9823-315e4b2eae89",
+      "username": "axelrod",
+      "email": "axelrod@redhat.com",
+      "firstName": "bobby",
+      "lastName": "axelrod",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "875c2b90-7480-4713-b869-7153d1789756",
+      "username": "rhoades",
+      "email": "chuck@redhat.com",
+      "firstName": "chuck",
+      "lastName": "rhoades",
+      "is_active": true,
+      "is_org_admin": true
+    }
+  ],
+  "links": {},
+  "meta": {
+    "count": 3
+  }
+}

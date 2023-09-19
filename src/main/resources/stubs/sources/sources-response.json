@@ -1,0 +1,7 @@
+{
+  "id": "12345",
+  "name": "sources-secret",
+  "authtype": "notifications",
+  "username": "foo",
+  "password": "p4$$w0rd"
+}

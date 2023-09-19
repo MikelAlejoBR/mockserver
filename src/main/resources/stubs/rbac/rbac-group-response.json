@@ -1,0 +1,13 @@
+{
+  "uuid": "67f23a35-a0b1-4374-9493-e44cad3203b3",
+  "name": "rbac-group-a",
+  "description": "A group for development purposes",
+  "platform_default": true,
+  "admin_default": false,
+  "created": "2023-07-26T14:07:12.568488Z",
+  "modified": "2023-07-26T14:07:12.568756Z",
+  "roles": [],
+  "roleCount": 0,
+  "system": false,
+  "principals": []
+}

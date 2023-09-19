@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "id": "5f0926fe-f223-4da2-ad79-aba2462d6024",
+      "username": "Dexter",
+      "email": "dexter@redhat.com",
+      "firstName": "dexter",
+      "lastName": "morgan",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "c01ff4fd-666a-4b0e-bb9b-0be0adba021c",
+      "username": "jesse",
+      "email": "jesse@redhat.com",
+      "firstName": "jesse",
+      "lastName": "pinkman",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "826af5c8-72c8-4566-920d-31a9fb8b5ea2",
+      "username": "heisenberg",
+      "email": "heisenberg@redhat.com",
+      "firstName": "walter",
+      "lastName": "white",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "996031c4-1494-4d1c-a821-4423d91352eb",
+      "username": "jimmy",
+      "email": "jimmymcnulty@redhat.com",
+      "firstName": "jimmy",
+      "lastName": "mcnulty",
+      "is_active": true,
+      "is_org_admin": true
+    },
+    {
+      "id": "99e2f58c-2b5d-42af-8f6d-612f26db632d",
+      "username": "soprano",
+      "email": "soprano@redhat.com",
+      "firstName": "tommy",
+      "lastName": "soprano",
+      "is_active": true,
+      "is_org_admin": true
+    }
+  ],
+  "links": {},
+  "meta": {
+    "count": 5
+  }
+}
