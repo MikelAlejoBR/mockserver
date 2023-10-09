@@ -84,7 +84,7 @@ public class RBACDefinitions {
             .respond(
                 response()
                     .withHeader(new Header("Content-Type", "application/json"))
-                    .withStatusCode(404)
+                    .withStatusCode(200)
                     .withBody(rbacGroupResponse)
             );
     }
