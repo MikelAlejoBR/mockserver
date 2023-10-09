@@ -87,5 +87,18 @@ public class RBACDefinitions {
                     .withStatusCode(200)
                     .withBody(rbacGroupResponse)
             );
+
+        mockServer
+            .when(
+                request()
+                    .withPath(RBAC_PATH_GROUPS_PRINCIPAL)
+                    .withPathParameter(schemaParam("uuid", "{\"type\": \"string\"}"))
+            )
+            .respond(
+                response()
+                    .withHeader(new Header("Content-Type", "application/json"))
+                    .withStatusCode(200)
+                    .withBody(rbacUserResponse)
+            );
     }
 }
