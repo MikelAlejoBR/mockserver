@@ -12,6 +12,9 @@ import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
 public class ITDefinitions {
+    private static final String IT_API_PREFIX_V2 = "/v2";
+    private static final String IT_PATH_FIND_USERS = String.format("%s/findUsers", IT_API_PREFIX_V2);
+
     private ITDefinitions() {}
 
     public static void setDefinitions(final ClientAndServer mockServer) throws IOException {
@@ -21,7 +24,7 @@ public class ITDefinitions {
             .when(
                 request()
                     .withMethod(HttpMethod.POST)
-                    .withPath("/v2/findUsers")
+                    .withPath(IT_PATH_FIND_USERS)
             )
             .respond(
                 response()

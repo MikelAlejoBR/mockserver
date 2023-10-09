@@ -12,6 +12,11 @@ import static org.mockserver.model.HttpResponse.response;
 import static org.mockserver.model.Parameter.schemaParam;
 
 public class RBACDefinitions {
+    private static final String RBAC_PATH_PREFIX_V1 = "/api/rbac/v1";
+    private static final String RBAC_PATH_GROUPS_PRINCIPAL = String.format("%s/groups/{uuid}/principals/", RBAC_PATH_PREFIX_V1);
+    private static final String RBAC_PATH_GROUPS_UUID = String.format("%s/groups/{uuid}/", RBAC_PATH_PREFIX_V1);
+    private static final String RBAC_PATH_PRINCIPALS = String.format("%s/principals/", RBAC_PATH_PREFIX_V1);
+
     private RBACDefinitions() {}
 
     public static void setDefinitions(final ClientAndServer mockServer) throws IOException {
@@ -23,7 +28,7 @@ public class RBACDefinitions {
         mockServer
             .when(
                 request()
-                    .withPath("/principals/")
+                    .withPath(RBAC_PATH_PRINCIPALS)
                     .withQueryStringParameters(
                         new Parameter("offset", "0"),
                         schemaParam("limit", "{\"type\": \"integer\"}"),
@@ -40,7 +45,7 @@ public class RBACDefinitions {
         mockServer
             .when(
                 request()
-                    .withPath("/principals/")
+                    .withPath(RBAC_PATH_PRINCIPALS)
                     .withQueryStringParameters(
                         new Parameter("offset", "5"),
                         schemaParam("limit", "{\"type\": \"integer\"}"),
@@ -56,7 +61,7 @@ public class RBACDefinitions {
         mockServer
             .when(
                 request()
-                    .withPath("/principals/")
+                    .withPath(RBAC_PATH_PRINCIPALS)
                     .withQueryStringParameters(
                         new Parameter("offset", "10"),
                         schemaParam("limit", "{\"type\": \"integer\"}"),
@@ -73,9 +78,8 @@ public class RBACDefinitions {
         mockServer
             .when(
                 request()
-                    .withPath("/groups/{groupUUID}/")
-                    .withPathParameter("groupUUID", "0feb461a-e7c8-4773-9901-52db07afbf3454")
-                    //.withPathParameter("groupUUID", "0feb461a-e7c8-4773-9901-52db07afbf34")
+                    .withPath(RBAC_PATH_GROUPS_UUID)
+                    .withPathParameter("uuid", "ff628f79-48ac-4113-b1a4-562f8d55f0a8")
             )
             .respond(
                 response()

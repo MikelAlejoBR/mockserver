@@ -1,6 +1,5 @@
 package com.redhat.console.definitions.sources;
 
-import com.redhat.console.definitions.rbac.RBACDefinitions;
 import jakarta.ws.rs.HttpMethod;
 import org.mockserver.integration.ClientAndServer;
 import org.mockserver.model.Header;
@@ -12,6 +11,9 @@ import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
 public class SourcesDefinitions {
+    private static final String SOURCES_API_PREFIX = "/api/sources/v3.1";
+    private static final String SOURCES_PATH_SECRETS = String.format("%s/secrets", SOURCES_API_PREFIX);
+
     private SourcesDefinitions() {}
 
     public static void setDefinitions(final ClientAndServer mockServer) throws IOException {
@@ -21,7 +23,7 @@ public class SourcesDefinitions {
             .when(
                 request()
                     .withMethod(HttpMethod.POST)
-                    .withPath("/api/sources/v3.1/secrets")
+                    .withPath(SOURCES_PATH_SECRETS)
             )
             .respond(
                 response()
