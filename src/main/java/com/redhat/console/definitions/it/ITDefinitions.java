@@ -1,6 +1,5 @@
 package com.redhat.console.definitions.it;
 
-import com.redhat.console.definitions.rbac.RBACDefinitions;
 import jakarta.ws.rs.HttpMethod;
 import org.mockserver.integration.ClientAndServer;
 import org.mockserver.model.Header;
@@ -18,7 +17,7 @@ public class ITDefinitions {
     private ITDefinitions() {}
 
     public static void setDefinitions(final ClientAndServer mockServer) throws IOException {
-        final byte[] itUserResponse = IOUtils.toByteArray(RBACDefinitions.class.getClassLoader().getResource("stubs/it/it-user-response.json"));
+        final byte[] itUserResponse = IOUtils.toByteArray(ITDefinitions.class.getClassLoader().getResource("stubs/it/it-user-response.json"));
 
         mockServer
             .when(
